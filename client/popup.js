@@ -19,6 +19,16 @@ function parseJSON(response) {
   return response.json()
 }
 
+function extractGif(data) {
+  if (!data || !data.image_url) return error('No response from Giphy!')
+
+  let url = data.image_url
+  let width = parseInt(data.image_width)
+  let height = parseInt(data.image_height)
+
+  return { url, width, height }
+}
+
 function displayGif(gif) {
   let gifContainer = document.getElementById('image-result')
 
@@ -29,17 +39,6 @@ function displayGif(gif) {
   renderStatus('')
 
   return gif
-}
-
-function extractGif(response) {
-  if (!response || !response.data || !response.data.image_url) return error('No response from Giphy!')
-
-  let data = response.data
-  let url = data.image_url
-  let width = parseInt(data.image_width)
-  let height = parseInt(data.image_height)
-
-  return { url, width, height }
 }
 
 function fetchGif(tag, callback, error) {
@@ -76,7 +75,7 @@ function copyToClipboard(gif) {
   disposable.setAttribute('id', 'disposable_id')
 
   document.body.appendChild(disposable);
-  document.getElementById('disposable_id').value = gif.url
+  document.getElementById('disposable_id').value = `![](${gif.url})`
 
   disposable.select();
 
