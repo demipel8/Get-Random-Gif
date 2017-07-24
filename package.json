@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "node server/index.js"
+  },
 	"postinstall": "cd server && npm install",
   "cacheDirectories": ["server/node_modules"]
 }

@@ -8,7 +8,6 @@
     "url": "https://github.com/demipel8/Random-gif-chrome-extension"
   },
   "scripts": {
-    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
