@@ -17,6 +17,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "koa": "^2.3.0"
+    "koa": "^2.3.0",
+    "koa2-cors": "^2.0.3"
   }
 }

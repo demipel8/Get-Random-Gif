@@ -1,10 +1,13 @@
 const Koa = require('koa')
+const cors = require('koa2-cors');
 const getContent = require('./getContent')
 
 const app = new Koa()
 const port = process.env.PORT
 const TAG = 'ok'
 const API_KEY = process.env.GIPHY_API_KEY
+
+app.use(cors());
 
 app.use(async (ctx) => {
   let tag = ctx.request.query.tag || TAG
