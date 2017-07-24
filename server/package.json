@@ -10,6 +10,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "8.1.x"
+  },
   "private": true,
   "author": {
     "name": "Demi [Alvaro Martinez de Miguel]",
