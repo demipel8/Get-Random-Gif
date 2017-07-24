@@ -1,6 +1,6 @@
 const API_KEY = '<API_SECRET>'
 const TAG = 'ok'
-const URL = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&rating=R&tag=${TAG}`
+const URL = `https://random-gif.herokuapp.com/?tag=${TAG}`
 
 document.addEventListener('DOMContentLoaded', randomGif)
 
