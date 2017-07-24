@@ -1,0 +1,4 @@
+{
+	"postinstall": "cd server && npm install",
+  "cacheDirectories": ["server/node_modules"]
+}
