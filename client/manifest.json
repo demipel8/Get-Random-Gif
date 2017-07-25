@@ -25,10 +25,16 @@
       "description": "Get gif"
     }
   },
-  "options_page": "options.html",
+  "minimum_chrome_version": "45.0",
+  "offline_enabled": false,
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": false
+  },
   "permissions": [
     "clipboardWrite",
     "https://api.giphy.com/*",
     "storage"
-  ]
+  ],
+  "short_name": "GRG"
 }
