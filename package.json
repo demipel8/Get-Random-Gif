@@ -4,7 +4,8 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "postinstall": "cd server && npm install"
+    "postinstall": "cd server && npm install",
+    "build": "rm grg.zip & zip -r grg.zip client"
   },
   "cacheDirectories": ["server/node_modules"]
 }
