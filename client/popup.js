@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', randomGif)
 
+const defaultTag = 'ok'
+
 function randomGif() {
   getTag()
     .then(formatURL)
@@ -13,7 +15,7 @@ function randomGif() {
 
 function getTag() {
   return new Promise((resolve, reject) => {
-    chrome.storage.sync.get('tag', items => resolve(items.tag))
+    chrome.storage.sync.get('tag', items => resolve(items.tag || defaultTag))
   })
 }
 
