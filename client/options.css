@@ -12,10 +12,6 @@ html, body {
   width:100%;
 }
 
-header {
-  flex: 0;
-}
-
 #content {
   flex: 1;
   display: flex;
@@ -26,24 +22,6 @@ header {
 footer {
   flex: 0;
 }
-
-/* ========= Header ========== */
-
-header {
-  background: #499DD2;
-  font-size: 13px;
-  color: #fefefe;
-}
-
-header h1 {
-  margin: 13.5px 5%;
-}
-
-header h1 a {
-  width: 184px;
-  height: 24px;
-}
-
 
 /* ========== Content ========== */
 
