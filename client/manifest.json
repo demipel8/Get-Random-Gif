@@ -1,19 +1,30 @@
 {
   "manifest_version": 2,
   "name": "Get random gif",
-  "description": "This extension add an image to your clipboard formatted as a markdown",
-  "version": "1.0",
-  "options_page": "options.html",
-  "browser_action": {
-    "default_icon": "images/icon.png",
-    "default_popup": "popup.html"
-  },
+  "description": "This extension adds a gif to your clipboard formatted as a markdown according to a specified tag",
+  "version": "1.0.0",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
+  "browser_action": {
+    "default_icon": "images/icon.png",
+    "default_popup": "popup.html"
+  },
+  "author": "Demi [demipel8@gmail.com]",
+   "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A",
+        "chromeos": "Ctrl+Shift+A",
+        "linux": "Ctrl+Shift+A"
+      }
+    }
+  },
+  "options_page": "options.html",
   "permissions": [
     "clipboardWrite",
     "https://api.giphy.com/*",
