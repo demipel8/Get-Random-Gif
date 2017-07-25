@@ -21,7 +21,8 @@
         "mac": "Command+Shift+A",
         "chromeos": "Ctrl+Shift+A",
         "linux": "Ctrl+Shift+A"
-      }
+      },
+      "description": "Get gif"
     }
   },
   "options_page": "options.html",
