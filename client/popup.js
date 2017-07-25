@@ -1,18 +1,29 @@
-const API_KEY = '<API_SECRET>'
-const TAG = 'ok'
-const URL = `https://random-gif.herokuapp.com/?tag=${TAG}`
-
 document.addEventListener('DOMContentLoaded', randomGif)
 
 function randomGif() {
-  renderStatus('Performing search in giphy for ' + TAG)
-
-  fetch(URL)
+  getTag()
+    .then(formatURL)
+    .then(fetchURL)
     .then(parseJSON)
     .then(extractGif)
     .then(displayGif)
     .then(copyToClipboard)
     .catch(displayError)
+}
+
+function getTag() {
+  return new Promise((resolve, reject) => {
+    chrome.storage.sync.get('tag', items => resolve(items.tag))
+  })
+}
+
+function formatURL(tag) {
+  renderStatus(`Performing search in giphy for ${tag}`)
+  return `https://random-gif.herokuapp.com/?tag=${tag}`
+}
+
+function fetchURL(url) {
+  return fetch(url)
 }
 
 function parseJSON(response) {
@@ -39,35 +50,6 @@ function displayGif(gif) {
   renderStatus('')
 
   return gif
-}
-
-function fetchGif(tag, callback, error) {
-  let url = `https://api.giphy.com/v1/gifs/random?api_key=${API_KEY}&rating=R&tag=${tag}`
-  let request = new XMLHttpRequest()
-
-  request.open('GET', url)
-  request.responseType = 'json'
-
-  request.onload = () => {
-    let response = request.response
-
-    if (!response || !response.data || !response.data.image_url) return error('No response from Giphy!')
-
-    let data = response.data
-    let imageUrl = data.image_url
-    let width = parseInt(data.image_width)
-    let height = parseInt(data.image_height)
-
-    console.assert(
-        typeof imageUrl == 'string' && !isNaN(width) && !isNaN(height),
-        'Unexpected respose from the Giphy API!')
-
-    return { url, width, height }
-  }
-
-  request.onerror = () => error('Network error.')
-
-  request.send()
 }
 
 function copyToClipboard(gif) {

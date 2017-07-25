@@ -18,7 +18,7 @@ function save_options() {
 }
 
 function restore_options() {
-  chrome.storage.sync.get({ tag: defaultTag }, items => {
+  chrome.storage.sync.get(TAG, items => {
     getElement(TAG).value = items.tag;
   });
 }
