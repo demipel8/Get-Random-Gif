@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Get Random Gif",
   "description": "This extension adds a gif to your clipboard formatted as a markdown according to a specified tag",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
@@ -33,7 +33,7 @@
   },
   "permissions": [
     "clipboardWrite",
-    "https://api.giphy.com/*",
+    "https://tbdsa3t4af.execute-api.us-east-2.amazonaws.com/v1/*",
     "storage"
   ],
   "short_name": "GRG"

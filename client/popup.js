@@ -21,7 +21,7 @@ function getTag() {
 
 function formatURL(tag) {
   renderStatus(`Performing search in giphy for ${tag}`)
-  return `https://random-gif.herokuapp.com/?tag=${tag}`
+  return `https://tbdsa3t4af.execute-api.us-east-2.amazonaws.com/v1/ramon?tag=${tag}`
 }
 
 function fetchURL(url) {
