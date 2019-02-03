@@ -7,7 +7,7 @@ Returns a random gif from Giphy given a Tag
 ## Components
 
 - Client: Google Chrome extension
-- Server: Node web server to proxy Giphy API requests (Deployed in Heroku)
+- lamda: lamda function to proxy Giphy API requests (Deployed in AWS)
 
 ## Build
 
@@ -22,7 +22,3 @@ npm run build
 ```
 
 This will generate a zip that can be uploaded to Chrome Web Store Developer Dashboard
-
-### Server
-
-The project is made to work in Heroku, just create a new project and upload the hole project.
