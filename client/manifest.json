@@ -14,7 +14,7 @@
     "default_popup": "popup.html"
   },
   "author": "Demi [demipel8@gmail.com]",
-   "commands": {
+  "commands": {
     "_execute_browser_action": {
       "suggested_key": {
         "windows": "Ctrl+Shift+A",
@@ -26,7 +26,11 @@
     }
   },
   "minimum_chrome_version": "45.0",
-  "offline_enabled": false,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "demipel8@gmail.com"
+    }
+  },
   "options_ui": {
     "page": "options.html",
     "chrome_style": false

@@ -15,7 +15,7 @@ function randomGif() {
 
 function getTag() {
   return new Promise((resolve, reject) => {
-    chrome.storage.sync.get('tag', items => resolve(items.tag || defaultTag))
+    chrome.storage.sync.get('tag', ({tag}) => resolve(tag || defaultTag))
   })
 }
 
