@@ -2,7 +2,7 @@
 
 Returns a random gif from Giphy given a Tag
 
-![](http://media2.giphy.com/media/l0MYIH1uwQf49mSFq/giphy.gif)
+![](https://i.giphy.com/l0HFkC8q3e6JtI8eI.webp)
 
 ## Components
 

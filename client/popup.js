@@ -15,7 +15,7 @@ function randomGif() {
 
 function getTag() {
   return new Promise((resolve, reject) => {
-    chrome.storage.sync.get('tag', ({tag}) => resolve(tag || defaultTag))
+    chrome.storage.sync.get('tag', ({ tag }) => resolve(tag || defaultTag))
   })
 }
 
@@ -33,11 +33,11 @@ function parseJSON(response) {
 }
 
 function extractGif(data) {
-  if (!data || !data.image_url) return error('No response from Giphy!')
+  if (!data || !data.id) return error('No response from Giphy!')
 
-  let url = data.image_url
-  let width = parseInt(data.image_width)
-  let height = parseInt(data.image_height)
+  let url = `https://i.giphy.com/${data.id}.webp`
+  let width = parseInt(data.images.original.width)
+  let height = parseInt(data.images.original.height)
 
   return { url, width, height }
 }

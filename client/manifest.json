@@ -1,15 +1,15 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Get Random Gif",
   "description": "This extension adds a gif to your clipboard formatted as a markdown according to a specified tag",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "icons": {
     "16": "images/icon16.png",
     "32": "images/icon32.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html"
   },
@@ -25,20 +25,21 @@
       "description": "Get gif"
     }
   },
-  "minimum_chrome_version": "45.0",
+  "minimum_chrome_version": "88.0",
   "browser_specific_settings": {
     "gecko": {
       "id": "demipel8@gmail.com"
     }
   },
   "options_ui": {
-    "page": "options.html",
-    "chrome_style": false
+    "page": "options.html"
   },
   "permissions": [
     "clipboardWrite",
-    "https://tbdsa3t4af.execute-api.us-east-2.amazonaws.com/v1/*",
     "storage"
+  ],
+  "host_permissions": [
+    "https://tbdsa3t4af.execute-api.us-east-2.amazonaws.com/v1/*"
   ],
   "short_name": "GRG"
 }
