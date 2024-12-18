@@ -7,7 +7,7 @@ Returns a random gif from Giphy given a Tag
 ## Components
 
 - Client: Google Chrome extension
-- lamda: lamda function to proxy Giphy API requests (Deployed in AWS)
+- lambda: lambda function to proxy Giphy API requests (Deployed in AWS)
 
 ## Build
 
